@@ -1,0 +1,6 @@
+{
+  "name": "Étoile — Cinematic Birthday Surprise",
+  "description": "An elegant, cinematic birthday delivery and interactive surprise experience crafted with heartfelt memories, candle wishes, love letters, and romantic surprises.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

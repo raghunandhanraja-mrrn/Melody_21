@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+  :root {
+    --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
+    /* Color Palette sampled from the reference image */
+    --color-bg-deep: #13051A;
+    --color-bg-surface: #1E0921;
+    --color-bg-card: #280F2A;
+    --color-bg-card-hover: #341437;
+    --color-wine-deep: #2F0E2C;
+    --color-wine-rich: #4C1A37;
+    --color-wine-berry: #6C2A45;
+    --color-crimson-rose: #8E384C;
+    --color-rose-terracotta: #A94C57;
+    --color-coral-crimson: #CB6C65;
+    --color-sunset-peach: #E88E74;
+    --color-sunset-peach-hover: #FFA288;
+    --color-apricot-glow: #DB977F;
+    --color-champagne-gold: #FDDA9D;
+    --color-champagne-blush: #F8DBBD;
+    --color-text-primary: #FFF7F0;
+    --color-text-secondary: #E8D3C8;
+    --color-text-muted: #B5989F;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #13051A;
+    color: #FFF7F0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.95; transform: scale(1) translateY(0); filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.8)); }
+  25% { opacity: 0.8; transform: scale(0.97) translateY(-1px) rotate(-1deg); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.7)); }
+  50% { opacity: 1; transform: scale(1.04) translateY(-2px) rotate(1deg); filter: drop-shadow(0 0 14px rgba(251, 191, 36, 0.9)); }
+  75% { opacity: 0.88; transform: scale(0.95) translateY(0) rotate(-0.5deg); filter: drop-shadow(0 0 9px rgba(245, 158, 11, 0.75)); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+@keyframes petalDrift {
+  0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(105vh) translateX(80px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes electricGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(198, 164, 255, 0.3), inset 0 0 15px rgba(198, 164, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(198, 164, 255, 0.6), inset 0 0 25px rgba(198, 164, 255, 0.25);
+  }
+}
+
+@keyframes lightningFlash {
+  0%, 92%, 100% { opacity: 0; }
+  93% { opacity: 0.8; }
+  94% { opacity: 0.2; }
+  96% { opacity: 1; }
+  98% { opacity: 0.3; }
+}
+
+@keyframes plasmaPulse {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.08); opacity: 0.7; }
+}
+
+.animate-electric-glow {
+  animation: electricGlow 3s ease-in-out infinite;
+}
+
+.animate-lightning-flash {
+  animation: lightningFlash 8s ease-in-out infinite;
+}
+
+.animate-plasma {
+  animation: plasmaPulse 6s ease-in-out infinite;
+}
+
+/* Custom scrollbar for parchment and letter modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(19, 5, 26, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(232, 142, 116, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(232, 142, 116, 0.65);
+}
